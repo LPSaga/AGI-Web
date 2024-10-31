@@ -30,7 +30,7 @@
   import Icon04 from '@/public/images/card-4.png'
   import Icon05 from '@/public/images/card-5.png'
   import Icon06 from '@/public/images/card-6.png'
-  import icons from '@/public/images/icons.png'
+  import iconImages from '@/public/images/icons.png'
 
   // import styles from '../app/css/home-module.css'
 
@@ -295,7 +295,7 @@
             </div>
 
             <div className="pt-10 md:pt-10" data-aos="fade-up" data-aos-delay="300">
-                <Image className="mx-auto" src={icons} width={1360} height={90} alt="Hero" />
+                <Image className="mx-auto" src={iconImages} width={1360} height={90} alt="Hero" />
             </div>
 
               {/* <div
