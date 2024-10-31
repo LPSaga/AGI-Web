@@ -2,10 +2,8 @@
 
   import React, { useState } from 'react';
   import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, DropdownItem, DropdownTrigger, Dropdown, DropdownMenu} from "@nextui-org/react";
-  import {ChevronDown, Lock, Activity, Flash, Server, TagUser, Scale} from "./Icons.js";
 
   import Image from 'next/image'
-  // import Link from 'next/link'
 
   import HeroLogo from '@/public/images/home-logo.png'
   import HeroBannerBg from '@/public/images/home-banner-bg.png'
@@ -13,11 +11,6 @@
   import CartIcon02 from '@/public/images/card-users.png'
   import CartIcon03 from '@/public/images/card-idle.png'
   import Logo from '@/public/images/logo-white.png'
-
-  import BlackNormalImage from '@/public/images/btn-black-normal.png'
-  import BlackHoverImage from '@/public/images/btn-black-hover.png'
-  import BlueNormalImage from '@/public/images/btn-blue-normal.png'
-  import BlueHoverImage from '@/public/images/btn-blue-hover.png'
 
   import Button1 from '@/public/images/button.png'
   import Button2 from '@/public/images/button2.png'
@@ -31,24 +24,15 @@
   import Icon05 from '@/public/images/card-5.png'
   import Icon06 from '@/public/images/card-6.png'
   import iconImages from '@/public/images/icons.png'
+  import AlertBgImage from '@/public/images/alert-bg.png'
+  import BottomBgImage from '@/public/images/bottom-bg.png'
+  import FooterImg from '@/public/images/footer.png'
 
-  // import styles from '../app/css/home-module.css'
 
   export default function Hero() {
-    const icons = {
-      chevron: <ChevronDown fill="currentColor" size={16} />,
-      scale: <Scale className="text-warning" fill="currentColor" size={30} />,
-      lock: <Lock className="text-success" fill="currentColor" size={30} />,
-      activity: <Activity className="text-secondary" fill="currentColor" size={30} />,
-      flash: <Flash className="text-primary" fill="currentColor" size={30} />,
-      server: <Server className="text-success" fill="currentColor" size={30} />,
-      user: <TagUser className="text-danger" fill="currentColor" size={30} />,
-    };
-
     return (
       <section className="relative bg-black">
           <Navbar 
-          position="static"
             classNames={{
               base: 'bg-transparent bg-black/50',
               item: [
@@ -94,7 +78,6 @@
                       <Button
                         disableRipple
                         className="p-0 bg-transparent data-[hover=true]:bg-transparent"
-                        endContent={icons.chevron}
                         radius="sm"
                         variant="light"
                       >
@@ -112,35 +95,30 @@
                     <DropdownItem
                       key="autoscaling"
                       description="ACME scales apps to meet user demand, automagically, based on load."
-                      startContent={icons.scale}
                     >
                       Autoscaling
                     </DropdownItem>
                     <DropdownItem
                       key="usage_metrics"
                       description="Real-time metrics to debug issues. Slow query added? We’ll show you exactly where."
-                      startContent={icons.activity}
                     >
                       Usage Metrics
                     </DropdownItem>
                     <DropdownItem
                       key="production_ready"
                       description="ACME runs on ACME, join us and others serving requests at web scale."
-                      startContent={icons.flash}
                     >
                       Production Ready
                     </DropdownItem>
                     <DropdownItem
                       key="99_uptime"
                       description="Applications stay on the grid with high availability and high uptime guarantees."
-                      startContent={icons.server}
                     >
                       +99% Uptime
                     </DropdownItem>
                     <DropdownItem
                       key="supreme_support"
                       description="Overcome any challenge with a supporting team ready to respond."
-                      startContent={icons.user}
                     >
                       +Supreme Support
                     </DropdownItem>
@@ -163,7 +141,6 @@
 
         <div className="relative hero-section max-w-6xl mx-auto px-4 sm:px-6">
           <div className="pt-32 md:pt-10">
-
         </div>
 
           <div className="pt-32 md:pt-40">
@@ -298,27 +275,37 @@
                 <Image className="mx-auto" src={iconImages} width={1360} height={90} alt="Hero" />
             </div>
 
-              {/* <div
-                className="max-w-xs mx-auto sm:max-w-none sm:inline-flex sm:justify-center space-y-4 sm:space-y-0 sm:space-x-4"
-                data-aos="fade-up"
-                data-aos-delay="200"
-              >
-                <div>
-                  <Link className="btn text-white bg-indigo-500 hover:bg-indigo-600 w-full shadow-sm group" href="/signup">
-                    Get Started Free{' '}
-                    <span className="tracking-normal text-sky-300 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">
-                      -&gt;
-                    </span>
-                  </Link>
-                </div>
-                <div>
-                  <a className="btn text-slate-300 bg-slate-700 hover:bg-slate-600 border-slate-600 w-full shadow-sm" href="#0">
-                    Read Docs
-                  </a>
-                </div>
-              </div> */}
+            <div className="max-w-3xl mx-auto text-center pb-20 md:pt-20">
+              <div style={{
+                position: 'absolute',
+              }}>
+                  <Image className="" src={AlertBgImage} width={760} height={480} alt="Hero" />
+              </div>
+
+              <div style={{
+                position: 'absolute',
+              }}>
+                 <h5 className="text-xl font-hkgrotesk text-center pb-20 md:pt-20 pl-36"  data-aos="fade-up">
+                 THE BEST WAY TO QUICKLY BUILD AND SHARE AIDAPP
+                </h5>
+              </div>
+
+              <ul className="flex grow justify-center flex-wrap items-center pt-32">
+                  <li>
+                    <BlueButton/>
+                  </li>
+
+                  <li>
+                    <BlackButton/>
+                  </li>
+                </ul>
             </div>
 
+          </div>
+        </div>
+
+        <div className="bg-black pt-16 md:pt-20" data-aos="fade-up" data-aos-delay="300">
+            <Image className="mx-auto" src={FooterImg} width={1920} height={304} alt="Hero" />
           </div>
         </div>
       </section>
