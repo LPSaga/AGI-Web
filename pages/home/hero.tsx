@@ -9,6 +9,7 @@ import {
   CardFooter,
   Button,
 } from "@nextui-org/react";
+import { CSSProperties } from "react";
 
 import HeroLogo from "@/public/images/home-logo.png";
 import CartIcon01 from "@/public/images/card-dev.png";
@@ -42,7 +43,9 @@ export default function Hero() {
             data-aos="fade-up"
             style={{
               background: "-webkit-linear-gradient(left, #4C45D8, #9DE9FA)",
+              // @ts-ignore
               "-webkit-background-clip": "text",
+              // @ts-ignore
               "-webkit-text-fill-color": "transparent",
             }}
           >
@@ -356,7 +359,9 @@ export default function Hero() {
                     style={{
                       background:
                         "-webkit-linear-gradient(left, #4C45D8, #9DE9FA)",
+                      // @ts-ignore
                       "-webkit-background-clip": "text",
+                      // @ts-ignore
                       "-webkit-text-fill-color": "transparent",
                     }}
                   >
@@ -389,7 +394,17 @@ export default function Hero() {
   );
 }
 
-const BlueButton = ({ buttonText, buttonStyle, fontSize }) => {
+interface BlueButtonProps {
+  buttonText?: string;
+  buttonStyle?: any;
+  fontSize?: string; // or number, depending on your needs
+}
+
+const BlueButton: React.FunctionComponent<BlueButtonProps> = ({
+  buttonText,
+  buttonStyle,
+  fontSize,
+}) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -439,7 +454,11 @@ const BlueButton = ({ buttonText, buttonStyle, fontSize }) => {
   );
 };
 
-const BlackButton = ({ buttonText, buttonStyle, fontSize }) => {
+const BlackButton: React.FunctionComponent<BlueButtonProps> = ({
+  buttonText,
+  buttonStyle,
+  fontSize,
+}) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -488,7 +507,11 @@ const BlackButton = ({ buttonText, buttonStyle, fontSize }) => {
   );
 };
 
-const LearnButton = ({ buttonText, buttonStyle, fontSize }) => {
+const LearnButton: React.FunctionComponent<BlueButtonProps> = ({
+  buttonText,
+  buttonStyle,
+  fontSize,
+}) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
