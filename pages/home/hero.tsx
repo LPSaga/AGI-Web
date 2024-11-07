@@ -49,7 +49,7 @@ export default function Hero() {
               "-webkit-text-fill-color": "transparent",
             }}
           >
-            The First Omni-chain Modular AIDAPP Network
+            The First Omni-chain Modular AIDAPP Platform
           </h3>
           <p
             className="text-xxl text-gray-400 mb-10"
@@ -58,14 +58,14 @@ export default function Hero() {
           >
             As a consumer-driven network, it empowers creators and developers to
             build AIDAPPs that users can directly engage with. Backed by the 50
-            million-strong CSDN developer community, Its unique tokenomics and
-            IAO create a positive flywheel, fostering a win-win ecosystem for
-            both creators and users.
+            million developer community, Its unique tokenomics and IAO create a
+            positive flywheel, fostering a win-win ecosystem for both creators
+            and users.
           </p>
 
           <ul className="flex grow justify-center flex-wrap items-center md:pt-10">
             <li className="ml-10">
-              <BlueButton buttonText={"Explore AIDAPP"} />
+              <BlueButton buttonText={"Run AI API"} />
             </li>
 
             <li className="ml-10">
@@ -371,7 +371,7 @@ export default function Hero() {
 
                 <ul className="flex grow justify-center flex-wrap items-center pt-32">
                   <li className="ml-10">
-                    <BlueButton buttonText={"Explore AIDAPP"} />
+                    <BlueButton buttonText={"Run AI API"} />
                   </li>
 
                   <li className="ml-10">
