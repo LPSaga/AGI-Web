@@ -9,7 +9,7 @@ import {
   CardFooter,
   Button,
 } from "@nextui-org/react";
-import { CSSProperties } from "react";
+import { Link } from "@nextui-org/link";
 
 import HeroLogo from "@/public/images/home-logo.png";
 import CartIcon01 from "@/public/images/card-dev.png";
@@ -27,19 +27,28 @@ import Icon03 from "@/public/images/card-3.png";
 import Icon04 from "@/public/images/card-4.png";
 import Icon05 from "@/public/images/card-5.png";
 import Icon06 from "@/public/images/card-6.png";
-import iconImages from "@/public/images/icons.png";
 import AlertBgImage from "@/public/images/alert-bg.png";
 import FooterImg from "@/public/images/footer.png";
-import BottomBgImage from "@/public/images/bottom-bg.png";
+import TelegramImg from "@/public/images/Telegram.png";
+import TwitterImg from "@/public/images/Twitter.png";
+import MediumImg from "@/public/images/Medium.png";
+import DiscordImg from "@/public/images/Discord.png";
 
 export default function Hero() {
+  const AIAPI = "https://develop.agiopen.network/model-market";
+  const AIDAPP = "https://builder.agiopen.network/";
+  const telegram = "https://t.me/aon_aonet";
+  const twitter = "https://x.com/aon_aonet";
+  const medium = "https://medium.com/@aon_aonet";
+  const discord = "https://discord.gg/7XvYyGAS";
+
   return (
-    <div className="relative hero-section max-w-6xl mx-auto px-4 sm:px-6">
-      <div className="pt-10 md:pt-10">
+    <div className="relative hero-section mx-auto">
+      <div className="">
         {/* Hero content */}
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="mx-auto text-center">
           <h3
-            className="h3 font-hkgrotesk mb-6"
+            className="h3 font-hkgrotesk mb-10 mt-16"
             data-aos="fade-up"
             style={{
               background: "-webkit-linear-gradient(left, #4C45D8, #9DE9FA)",
@@ -49,10 +58,11 @@ export default function Hero() {
               "-webkit-text-fill-color": "transparent",
             }}
           >
-            The First Omni-chain Modular AIDAPP Platform
+            AGI Open Network（AON）：The First Omni-chain Modular AIDAPP
+            Platform
           </h3>
           <p
-            className="text-xxl text-gray-400 mb-10"
+            className="text-xxl text-gray-400 pb-[100px]"
             data-aos="fade-up"
             data-aos-delay="100"
           >
@@ -63,18 +73,24 @@ export default function Hero() {
             and users.
           </p>
 
-          <ul className="flex grow justify-center flex-wrap items-center md:pt-10">
-            <li className="ml-10">
-              <BlueButton buttonText={"Run AI API"} />
+          <ul className="flex grow justify-center flex-wrap items-center">
+            <li className="mr-10">
+              <BlueButton
+                buttonText={"Run AI API"}
+                onClick={() => window.open(AIAPI)}
+              />
             </li>
 
-            <li className="ml-10">
-              <BlackButton buttonText={"Build AIDAPP"} />
+            <li className="">
+              <BlackButton
+                buttonText={"Build AIDAPP"}
+                onClick={() => window.open(AIDAPP)}
+              />
             </li>
           </ul>
 
           <div
-            className="pt-16 md:pt-20"
+            className="pt-[160px] md:pt-20"
             data-aos="fade-up"
             data-aos-delay="300"
           >
@@ -93,7 +109,7 @@ export default function Hero() {
             data-aos-delay="300"
           >
             <div className="flex flex-col md:flex-row items-center">
-              <div className="w-full md:w-1/3">
+              <div className="w-full md:w-1/5">
                 <h3
                   className="h4 font-hkgrotesk mb-6 text-left"
                   data-aos="fade-up"
@@ -101,8 +117,8 @@ export default function Hero() {
                   Simple, Clear, Useful For
                 </h3>
               </div>
-              <div className="w-full md:w-1/5"></div>
-              <div className="w-full md:w-3/5">
+              <div className="w-full md:w-2/5"></div>
+              <div className="w-full md:w-2/5">
                 <p
                   className="text-xxl text-gray-400 mb-10 text-right"
                   data-aos="fade-up"
@@ -116,9 +132,9 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="max-w-3xl">
+          <div className="max-auto">
             {/* Integration boxes */}
-            <div className="relative max-w-xs sm:max-w-md mx-auto md:max-w-3xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-3 ">
+            <div className="relative mx-auto grid md:grid-cols-3 gap-3 ">
               {/* Top vertical line */}
               <div
                 className="relative flex justify-center items-center  aspect-square"
@@ -127,15 +143,15 @@ export default function Hero() {
                 {/* Circle */}
                 <div className="rounded-full flex justify-center items-center">
                   <Card
-                    isFooterBlurred
+                    isFooterBlurred={false}
                     radius="lg"
-                    className="border-none h-[270px] max-w-[442px]"
+                    className="border-none max-w-[442px]"
                   >
                     <CardHeader className="absolute z-10 top-1 flex-col items-center">
-                      <h4 className="text-white font-medium text-l h-[40px]">
+                      <h4 className="text-white font-medium text-xl h-[40px]">
                         Developers
                       </h4>
-                      <p className="text-xs text-gray-400 text-left pt-5 pb-5">
+                      <p className="text-l text-gray-400 text-left pt-5 pb-5">
                         Developers build and maintain ecosystem apps, profiting
                         from sales, subscriptions, and earning rewards through
                         token incentives and participation income.
@@ -147,11 +163,7 @@ export default function Hero() {
                       src={CartIcon01}
                     />
                     <CardFooter className="absolute bottom-0 z-10 justify-between">
-                      <LearnButton
-                        buttonText={"Learn More"}
-                        buttonStyle={{ width: "149px", height: "50px" }}
-                        fontSize={"10px"}
-                      />
+                      <LearnButton buttonText={"Learn More"} />
                     </CardFooter>
                   </Card>
                 </div>
@@ -163,15 +175,15 @@ export default function Hero() {
                 {/* Circle */}
                 <div className="rounded-full flex justify-center items-center">
                   <Card
-                    isFooterBlurred
+                    isFooterBlurred={false}
                     radius="lg"
-                    className="border-none h-[270px] max-w-[442px]"
+                    className="border-none max-w-[442px]"
                   >
                     <CardHeader className="absolute z-10 top-1 flex-col items-center">
-                      <h4 className="text-white font-medium text-l h-[40px]">
+                      <h4 className="text-white font-medium text-xl h-[40px]">
                         Users
                       </h4>
-                      <p className="text-xs text-gray-400 text-left pt-5 pb-5">
+                      <p className="text-l text-gray-400 text-left pt-5 pb-5">
                         Users can earn tokens by participating in activities,
                         enriching the ecosystem, and use them to access AI
                         applications for free or at reduced costs.
@@ -183,11 +195,7 @@ export default function Hero() {
                       src={CartIcon02}
                     />
                     <CardFooter className="absolute bottom-0 z-10 justify-between">
-                      <LearnButton
-                        buttonText={"Learn More"}
-                        buttonStyle={{ width: "149px", height: "50px" }}
-                        fontSize={"10px"}
-                      />
+                      <LearnButton buttonText={"Learn More"} />
                     </CardFooter>
                   </Card>
                 </div>
@@ -199,15 +207,15 @@ export default function Hero() {
                 {/* Circle */}
                 <div className="rounded-full flex justify-center items-center">
                   <Card
-                    isFooterBlurred
+                    isFooterBlurred={false}
                     radius="lg"
-                    className="border-none h-[270px] max-w-[442px]"
+                    className="border-none max-w-[442px]"
                   >
                     <CardHeader className="absolute z-10 top-1 flex-col items-center">
-                      <h4 className="text-white font-medium text-l h-[40px]">
+                      <h4 className="text-white font-medium text-xl h-[40px]">
                         Idle computing power providers
                       </h4>
-                      <p className="text-xs text-gray-400 text-left pt-5 pb-5">
+                      <p className="text-l text-gray-400 text-left pt-5 pb-5">
                         Individuals or institutions provide computing power and
                         data for large model training, earning tokens based on
                         service time, quality, and data usage, incentivizing
@@ -220,11 +228,7 @@ export default function Hero() {
                       src={CartIcon03}
                     />
                     <CardFooter className="absolute bottom-0 z-10 justify-between">
-                      <LearnButton
-                        buttonText={"Learn More"}
-                        buttonStyle={{ width: "149px", height: "50px" }}
-                        fontSize={"10px"}
-                      />
+                      <LearnButton buttonText={"Learn More"} />
                     </CardFooter>
                   </Card>
                 </div>
@@ -232,7 +236,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="relative max-w-xs sm:max-w-md mx-auto md:max-w-6xl grid grid-cols-2 sm:grid-cols-6 md:grid-cols-6 mt-32">
+          <div className="relative mx-auto grid grid-cols-2 sm:grid-cols-6 md:grid-cols-6 mt-32">
             {/* Top vertical line */}
             <div
               className="relative flex justify-center items-center  aspect-square p-1"
@@ -325,69 +329,127 @@ export default function Hero() {
               data-aos="fade-up"
               data-aos-delay="300"
             >
-              <Image
+              {/* <Image
                 className="mx-auto"
                 src={iconImages}
                 width={1360}
                 height={90}
                 alt="Hero"
-              />
+              /> */}
 
-              <div className="max-w-3xl mx-auto text-center pb-32 md:pt-40">
+              <div className="relative mx-auto grid grid-cols-4">
+                {/* Top vertical line */}
+                <div className="relative " data-aos="fade-up">
+                  {/* Circle */}
+                  <div className="flex justify-left items-center">
+                    {/* Icon */}
+                    <Link rel="stylesheet" href={twitter} target="_blank">
+                      <Image
+                        src={TwitterImg}
+                        width={221}
+                        height={90}
+                        alt="Icon 01"
+                      />
+                    </Link>
+                  </div>
+                </div>
+                <div className="relative" data-aos="fade-up">
+                  {/* Circle */}
+                  <div className="flex justify-left items-center">
+                    {/* Icon */}
+                    <Link rel="stylesheet" href={discord} target="_blank">
+                      <Image
+                        src={DiscordImg}
+                        width={221}
+                        height={90}
+                        alt="Icon 02"
+                      />
+                    </Link>
+                  </div>
+                </div>
+                <div className="relative" data-aos="fade-up">
+                  {/* Circle */}
+                  <div className="flex justify-left items-center">
+                    {/* Icon */}
+                    <Link rel="stylesheet" href={medium} target="_blank">
+                      <Image
+                        src={MediumImg}
+                        width={221}
+                        height={90}
+                        alt="Icon 03"
+                      />
+                    </Link>
+                  </div>
+                </div>
+                <div className="relative" data-aos="fade-up">
+                  {/* Circle */}
+                  <div className="flex justify-left items-center">
+                    {/* Icon */}
+                    <Link rel="stylesheet" href={telegram} target="_blank">
+                      <Image
+                        src={TelegramImg}
+                        width={221}
+                        height={90}
+                        alt="Icon 04"
+                      />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mx-auto text-center pb-32 md:pt-40">
                 <div
                   style={{
                     position: "absolute",
                   }}
                 >
                   <Image
-                    className=""
+                    className="z-10 h-full object-cover"
                     src={AlertBgImage}
-                    width={760}
-                    height={480}
                     alt="Hero"
                   />
                 </div>
-
-                <div
+                <h3
+                  className="h3 font-hkgrotesk mt-20"
+                  data-aos="fade-up"
                   style={{
-                    position: "absolute",
+                    background:
+                      "-webkit-linear-gradient(left, #4C45D8, #9DE9FA)",
+                    // @ts-ignore
+                    "-webkit-background-clip": "text",
+                    // @ts-ignore
+                    "-webkit-text-fill-color": "transparent",
                   }}
                 >
-                  <h5
-                    className="text-xl font-hkgrotesk text-center pb-10 md:pt-16 pl-36"
-                    data-aos="fade-up"
-                    style={{
-                      background:
-                        "-webkit-linear-gradient(left, #4C45D8, #9DE9FA)",
-                      // @ts-ignore
-                      "-webkit-background-clip": "text",
-                      // @ts-ignore
-                      "-webkit-text-fill-color": "transparent",
-                    }}
-                  >
-                    THE BEST WAY TO QUICKLY BUILD AND SHARE AIDAPP
-                  </h5>
-                </div>
+                  THE BEST WAY TO QUICKLY BUILD AND SHARE AIDAPP
+                </h3>
 
-                <ul className="flex grow justify-center flex-wrap items-center pt-32">
-                  <li className="ml-10">
-                    <BlueButton buttonText={"Run AI API"} />
+                <ul className="flex grow justify-center flex-wrap items-center pt-20">
+                  <li className="mr-10">
+                    <BlueButton
+                      buttonText={"Run AI API"}
+                      onClick={() => window.open(AIAPI)}
+                    />
                   </li>
 
-                  <li className="ml-10">
-                    <BlackButton buttonText={"Build AIDAPP"} />
+                  <li className="">
+                    <BlackButton
+                      buttonText={"Build AIDAPP"}
+                      onClick={() => window.open(AIDAPP)}
+                    />
                   </li>
                 </ul>
               </div>
             </div>
           </div>
-        </div>
-        <div className="pt-10 h-[104px] w-[1100]">
-          <Image
-            className="z-10 w-full h-full object-cover"
-            src={FooterImg}
-            alt="FooterImg"
-          />
+
+          <div className="max-auto mt-40">
+            <Image
+              className="z-10 w-full h-full object-cover"
+              src={FooterImg}
+              alt="FooterImg"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -398,12 +460,14 @@ interface BlueButtonProps {
   buttonText?: string;
   buttonStyle?: any;
   fontSize?: string; // or number, depending on your needs
+  onClick?: () => void;
 }
 
 const BlueButton: React.FunctionComponent<BlueButtonProps> = ({
   buttonText,
   buttonStyle,
   fontSize,
+  onClick,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -432,6 +496,7 @@ const BlueButton: React.FunctionComponent<BlueButtonProps> = ({
       style={buttonStyleToUse}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={onClick}
     >
       <Image src={Button1} alt="normal btn" fill objectFit="cover" />
       {isHovered && (
@@ -458,6 +523,7 @@ const BlackButton: React.FunctionComponent<BlueButtonProps> = ({
   buttonText,
   buttonStyle,
   fontSize,
+  onClick,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -485,6 +551,7 @@ const BlackButton: React.FunctionComponent<BlueButtonProps> = ({
       style={buttonStyleToUse}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={onClick}
     >
       <Image src={Button2} alt="normal btn" fill objectFit="cover" />
       {isHovered && (
@@ -511,6 +578,7 @@ const LearnButton: React.FunctionComponent<BlueButtonProps> = ({
   buttonText,
   buttonStyle,
   fontSize,
+  onClick,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -531,13 +599,14 @@ const LearnButton: React.FunctionComponent<BlueButtonProps> = ({
   const buttonStyleToUse = buttonStyle
     ? { ...defaultButtonStyle, ...buttonStyle }
     : defaultButtonStyle;
-  const defaultFontSize = "10px";
+  const defaultFontSize = "12px";
   const fontSizeToUse = fontSize || defaultFontSize;
   return (
     <div
       style={buttonStyleToUse}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={onClick}
     >
       <Image src={Button2} alt="normal btn" fill objectFit="fill" />
       {isHovered && (

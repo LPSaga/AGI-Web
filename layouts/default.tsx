@@ -77,11 +77,9 @@ export default function DefaultLayout({
       <Image
         className="mx-auto"
         src={HeroBannerBg}
-        width={1920}
         alt="Hero"
         style={{
           position: "absolute",
-          height: "650px", // 设置固定高度
           objectFit: "cover", // 控制图片填充方式
         }}
       />
@@ -101,7 +99,7 @@ export default function DefaultLayout({
         </div>
       )}
 
-      <main className="container mx-auto max-w-7xl px-6 flex-grow pt-16">
+      <main className="container mx-auto max-w-[1360] flex-grow pt-16">
         {children}
       </main>
     </div>

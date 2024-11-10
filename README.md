@@ -4,9 +4,9 @@ This is a template for creating applications using Next.js 14 (pages directory) 
 
 [Try it on CodeSandbox](https://githubbox.com/nextui-org/next-pages-template)
 
->Note: Since Next.js 14, the pages router is recommend migrating to the [new App Router](https://nextjs.org/docs/app) to leverage React's latest features
+> Note: Since Next.js 14, the pages router is recommend migrating to the [new App Router](https://nextjs.org/docs/app) to leverage React's latest features
 >
->Read more: [Pages Router](https://nextjs.org/docs/pages)
+> Read more: [Pages Router](https://nextjs.org/docs/pages)
 
 ## Technologies Used
 
@@ -53,3 +53,19 @@ After modifying the `.npmrc` file, you need to run `pnpm install` again to ensur
 ## License
 
 Licensed under the [MIT license](https://github.com/nextui-org/next-pages-template/blob/main/LICENSE).
+
+页面的title修改为：AGI Open Network（AON）：The First Omni-chain Modular AIDAPP Platform
+页面导航：
+AI API：https://develop.agiopen.network/model-market
+AIDAPP Builder：https://builder.agiopen.network/
+Develop
+Developer portal：https://develop.agiopen.network/developer-portal
+Docs：https://docs.agiopen.network/
+右侧加上：其他页面的通用信息（带登陆）
+
+页面上吗的各种平台的链接：
+telegram： https://t.me/aon_aonet
+twitter： https://x.com/aon_aonet
+medium：https://medium.com/@aon_aonet
+Developer portal 和 docs是develop的下拉菜单二级
+discord地址：https://discord.gg/7XvYyGAS
