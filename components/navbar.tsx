@@ -24,7 +24,7 @@ export const Navbar = () => {
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-14" justify="center">
         <NavbarItem isActive>
-          <Link href="#" aria-current="page">
+          <Link color="foreground" href="#" aria-current="page">
             Home
           </Link>
         </NavbarItem>

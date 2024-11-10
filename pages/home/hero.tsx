@@ -2,13 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Button,
-} from "@nextui-org/react";
+import { Card, CardHeader, CardFooter, Button } from "@nextui-org/react";
 import { Link } from "@nextui-org/link";
 
 import HeroLogo from "@/public/images/home-logo.png";
@@ -77,14 +71,14 @@ export default function Hero() {
             <li className="mr-10">
               <BlueButton
                 buttonText={"Run AI API"}
-                onClick={() => window.open(AIAPI)}
+                handleOnClick={() => window.open(AIAPI)}
               />
             </li>
 
             <li className="">
               <BlackButton
                 buttonText={"Build AIDAPP"}
-                onClick={() => window.open(AIDAPP)}
+                handleOnClick={() => window.open(AIDAPP)}
               />
             </li>
           </ul>
@@ -428,14 +422,14 @@ export default function Hero() {
                   <li className="mr-10">
                     <BlueButton
                       buttonText={"Run AI API"}
-                      onClick={() => window.open(AIAPI)}
+                      handleOnClick={() => window.open(AIAPI)}
                     />
                   </li>
 
                   <li className="">
                     <BlackButton
                       buttonText={"Build AIDAPP"}
-                      onClick={() => window.open(AIDAPP)}
+                      handleOnClick={() => window.open(AIDAPP)}
                     />
                   </li>
                 </ul>
@@ -460,14 +454,14 @@ interface BlueButtonProps {
   buttonText?: string;
   buttonStyle?: any;
   fontSize?: string; // or number, depending on your needs
-  onClick?: () => void;
+  handleOnClick?: () => void;
 }
 
 const BlueButton: React.FunctionComponent<BlueButtonProps> = ({
   buttonText,
   buttonStyle,
   fontSize,
-  onClick,
+  handleOnClick,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -492,11 +486,11 @@ const BlueButton: React.FunctionComponent<BlueButtonProps> = ({
   const fontSizeToUse = fontSize || defaultFontSize;
 
   return (
-    <div
+    <Button
       style={buttonStyleToUse}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      onClick={onClick}
+      onClick={handleOnClick}
     >
       <Image src={Button1} alt="normal btn" fill objectFit="cover" />
       {isHovered && (
@@ -515,7 +509,7 @@ const BlueButton: React.FunctionComponent<BlueButtonProps> = ({
       >
         {buttonText}
       </div>
-    </div>
+    </Button>
   );
 };
 
@@ -523,7 +517,7 @@ const BlackButton: React.FunctionComponent<BlueButtonProps> = ({
   buttonText,
   buttonStyle,
   fontSize,
-  onClick,
+  handleOnClick,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -547,11 +541,11 @@ const BlackButton: React.FunctionComponent<BlueButtonProps> = ({
   const defaultFontSize = "14px";
   const fontSizeToUse = fontSize || defaultFontSize;
   return (
-    <div
+    <Button
       style={buttonStyleToUse}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      onClick={onClick}
+      onClick={handleOnClick}
     >
       <Image src={Button2} alt="normal btn" fill objectFit="cover" />
       {isHovered && (
@@ -570,7 +564,7 @@ const BlackButton: React.FunctionComponent<BlueButtonProps> = ({
       >
         {buttonText}
       </div>
-    </div>
+    </Button>
   );
 };
 
@@ -578,7 +572,7 @@ const LearnButton: React.FunctionComponent<BlueButtonProps> = ({
   buttonText,
   buttonStyle,
   fontSize,
-  onClick,
+  handleOnClick,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -602,11 +596,11 @@ const LearnButton: React.FunctionComponent<BlueButtonProps> = ({
   const defaultFontSize = "12px";
   const fontSizeToUse = fontSize || defaultFontSize;
   return (
-    <div
+    <Button
       style={buttonStyleToUse}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      onClick={onClick}
+      onClick={handleOnClick}
     >
       <Image src={Button2} alt="normal btn" fill objectFit="fill" />
       {isHovered && (
@@ -625,6 +619,6 @@ const LearnButton: React.FunctionComponent<BlueButtonProps> = ({
       >
         {buttonText}
       </div>
-    </div>
+    </Button>
   );
 };
