@@ -27,6 +27,11 @@ import TelegramImg from "@/public/images/Telegram.png";
 import TwitterImg from "@/public/images/Twitter.png";
 import MediumImg from "@/public/images/Medium.png";
 import DiscordImg from "@/public/images/Discord.png";
+import Logo from "@/public/images/logo-white.png";
+import GithubIcon from "@/public/images/GithubIcon.png";
+import TwitterIcon from "@/public/images/TwitterIcon.png";
+import MediumIcon from "@/public/images/MediumIcon.png";
+import DiscordIcon from "@/public/images/DiscordIcon.png";
 
 export default function Hero() {
   const AIAPI = "https://develop.agiopen.network/model-market";
@@ -35,7 +40,8 @@ export default function Hero() {
   const twitter = "https://x.com/aon_aonet";
   const medium = "https://medium.com/@aon_aonet";
   const discord = "https://discord.gg/7XvYyGAS";
-
+  const github = "https://github.com/aonnet/";
+  const docs = "https://docs.agiopen.network/";
   return (
     <div className="relative hero-section mx-auto">
       <div className="">
@@ -437,12 +443,122 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="max-auto mt-40">
-            <Image
-              className="z-10 w-full h-full object-cover"
-              src={FooterImg}
-              alt="FooterImg"
-            />
+          <div className="w-[1360] mt-40">
+            <ul className="flex justify-content: space-between grow">
+              <li className="w-[146]">
+                <Image
+                  className="z-10 w-full h-full object-cover"
+                  src={Logo}
+                  alt="Logo"
+                />
+              </li>
+              <li>
+                <div className="w-[90]"></div>
+              </li>
+              <li>
+                <Link
+                  className="h-[40px] font-medium"
+                  color="foreground"
+                  href={medium}
+                  target="_blank"
+                >
+                  Media Kit
+                </Link>
+              </li>
+              <li>
+                <div className="w-[64]"></div>
+              </li>
+              <li>
+                <Link
+                  className="h-[40px] font-medium"
+                  color="foreground"
+                  href={docs}
+                  target="_blank"
+                >
+                  Docs
+                </Link>
+              </li>
+              <li>
+                <div className="w-[64]"></div>
+              </li>
+              <li>
+                <Link
+                  className="h-[40px] font-medium"
+                  color="foreground"
+                  href={medium}
+                  target="_blank"
+                >
+                  Contact us: info@agiopen.network
+                </Link>
+              </li>
+              <li>
+                <div className="w-[380]"></div>
+              </li>
+
+              <li>
+                <Link
+                  className="w-[68]"
+                  rel="stylesheet"
+                  href={medium}
+                  target="_blank"
+                >
+                  <Image
+                    src={MediumIcon}
+                    width={36}
+                    height={36}
+                    alt="Icon 01"
+                  />
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  className="w-[68]"
+                  rel="stylesheet"
+                  href={discord}
+                  target="_blank"
+                >
+                  <Image
+                    src={DiscordIcon}
+                    width={36}
+                    height={36}
+                    alt="Icon 02"
+                  />
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  className="w-[68]"
+                  rel="stylesheet"
+                  href={twitter}
+                  target="_blank"
+                >
+                  <Image
+                    src={TwitterIcon}
+                    width={36}
+                    height={36}
+                    alt="Icon 03"
+                  />
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  className="w-[36]"
+                  rel="stylesheet"
+                  href={github}
+                  target="_blank"
+                >
+                  <Image
+                    src={GithubIcon}
+                    width={36}
+                    height={36}
+                    alt="Icon 04"
+                  />
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

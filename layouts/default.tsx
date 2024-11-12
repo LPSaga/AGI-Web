@@ -36,7 +36,7 @@ const hkgrotesk = localFont({
 });
 
 export const metadata = {
-  title: "AGI",
+  title: "AGI Open Network",
   description: "",
 };
 

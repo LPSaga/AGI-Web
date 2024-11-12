@@ -30,7 +30,7 @@ export const Navbar = () => {
         </NavbarItem>
         <NavbarItem>
           <Link color="foreground" href={AIAPI} target="_blank">
-            AIDAPP Store
+            AI APP
           </Link>
         </NavbarItem>
         <NavbarItem>

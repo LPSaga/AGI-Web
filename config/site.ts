@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "AGI Open Network",
+  name: "AGI Open Network（AON）：The First Omni-chain Modular AIDAPP Platform",
   description: "Make beautiful websites regardless of your design experience.",
   navItems: [
     {
