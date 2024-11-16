@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Card, CardHeader, CardFooter, Button } from "@nextui-org/react";
 import { Link } from "@nextui-org/link";
 
-import HeroLogo from "@/public/images/home-logo.png";
+import HeroLogo from "@/public/images/h5-home-logo.png";
 import CartIcon01 from "@/public/images/card-dev.png";
 import CartIcon02 from "@/public/images/card-users.png";
 import CartIcon03 from "@/public/images/card-idle.png";
@@ -43,12 +43,12 @@ export default function Hero() {
   const github = "https://github.com/aonnet/";
   const docs = "https://docs.agiopen.network/";
   return (
-    <div className="relative hero-section mx-auto">
+    <div className="relative hero-section mx-auto mr-[14px] ml-[14px]">
       <div className="">
         {/* Hero content */}
         <div className="mx-auto text-center">
-          <h3
-            className="h3 font-hkgrotesk mb-10 mt-16"
+          <p
+            className="text-[24px] font-hkgrotesk mb-[10px]"
             data-aos="fade-up"
             style={{
               background: "-webkit-linear-gradient(left, #4C45D8, #9DE9FA)",
@@ -58,11 +58,10 @@ export default function Hero() {
               "-webkit-text-fill-color": "transparent",
             }}
           >
-            AGI Open Network（AON）：The First Omni-chain Modular AIDAPP
-            Platform
-          </h3>
+            The First Omni-chain Modular AIDAPP Platform
+          </p>
           <p
-            className="text-xxl text-gray-400 pb-[100px]"
+            className="text-[14px] text-white-400 pb-[144px]"
             data-aos="fade-up"
             data-aos-delay="100"
           >
@@ -74,7 +73,7 @@ export default function Hero() {
           </p>
 
           <ul className="flex grow justify-center flex-wrap items-center">
-            <li className="mr-10">
+            <li className="mr-[10px]">
               <BlueButton
                 buttonText={"Run AI API"}
                 handleOnClick={() => window.open(AIAPI)}
@@ -89,52 +88,34 @@ export default function Hero() {
             </li>
           </ul>
 
-          <div
-            className="pt-[160px] md:pt-20"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
+          <div className="pt-[40px]" data-aos="fade-up" data-aos-delay="300">
             <Image
-              className="mx-auto"
+              className="z-0 w-full h-full object-cover"
               src={HeroLogo}
-              width={1380}
-              height={78}
               alt="Hero"
             />
           </div>
 
-          <div
-            className="pt-32 md:pt-40"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            <div className="flex flex-col md:flex-row items-center">
-              <div className="w-full md:w-1/5">
-                <h3
-                  className="h4 font-hkgrotesk mb-6 text-left"
-                  data-aos="fade-up"
-                >
-                  Simple, Clear, Useful For
-                </h3>
-              </div>
-              <div className="w-full md:w-2/5"></div>
-              <div className="w-full md:w-2/5">
-                <p
-                  className="text-xxl text-gray-400 mb-10 text-right"
-                  data-aos="fade-up"
-                  data-aos-delay="100"
-                >
-                  To build an open and collaborative AI technology ecosystem
-                  that fosters the integration and innovation of AI applications
-                  worldwide
-                </p>
-              </div>
+          <div className="pt-[40px]" data-aos="fade-up" data-aos-delay="300">
+            <div className="flex flex-col">
+              <h3 className="h4 font-hkgrotesk text-left" data-aos="fade-up">
+                Simple, Clear, Useful For
+              </h3>
+              <p
+                className="text-xxl text-white pt-[12px] pb-[40px] text-left"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                To build an open and collaborative AI technology ecosystem that
+                fosters the integration and innovation of AI applications
+                worldwide
+              </p>
             </div>
           </div>
 
           <div className="max-auto">
             {/* Integration boxes */}
-            <div className="relative mx-auto grid md:grid-cols-3 gap-3 ">
+            <div className="relative mx-auto grid md:grid-cols-1 gap-1">
               {/* Top vertical line */}
               <div
                 className="relative flex justify-center items-center  aspect-square"
@@ -145,7 +126,7 @@ export default function Hero() {
                   <Card
                     isFooterBlurred={false}
                     radius="lg"
-                    className="border-none max-w-[442px]"
+                    className="border-none min-w-[344px]"
                   >
                     <CardHeader className="absolute z-10 top-1 flex-col items-center">
                       <h4 className="text-white font-medium text-xl h-[40px]">
@@ -177,7 +158,7 @@ export default function Hero() {
                   <Card
                     isFooterBlurred={false}
                     radius="lg"
-                    className="border-none max-w-[442px]"
+                    className="border-none min-w-[344px]"
                   >
                     <CardHeader className="absolute z-10 top-1 flex-col items-center">
                       <h4 className="text-white font-medium text-xl h-[40px]">
@@ -209,7 +190,7 @@ export default function Hero() {
                   <Card
                     isFooterBlurred={false}
                     radius="lg"
-                    className="border-none max-w-[442px]"
+                    className="border-none min-w-[344px]"
                   >
                     <CardHeader className="absolute z-10 top-1 flex-col items-center">
                       <h4 className="text-white font-medium text-xl h-[40px]">
@@ -236,16 +217,20 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="relative mx-auto grid grid-cols-2 sm:grid-cols-6 md:grid-cols-6 mt-32">
+          <div className="relative mx-auto grid grid-cols-2  mt-[80px]">
             {/* Top vertical line */}
             <div
               className="relative flex justify-center items-center  aspect-square p-1"
               data-aos="fade-up"
             >
               {/* Circle */}
-              <div className="bg-gradient-to-t from-slate-800 to-slate-900 w-213 h-261 rounded-full flex justify-center items-center">
+              <div className="rounded-full flex justify-center items-center">
                 {/* Icon */}
-                <Image src={Icon01} width={213} height={261} alt="Icon 01" />
+                <Image
+                  className="z-0 w-full h-full object-cover"
+                  src={Icon01}
+                  alt="Icon 01"
+                />
               </div>
             </div>
             <div
@@ -253,9 +238,13 @@ export default function Hero() {
               data-aos="fade-up"
             >
               {/* Circle */}
-              <div className="bg-gradient-to-t from-slate-800 to-slate-900 w-213 h-261 rounded-full flex justify-center items-center">
+              <div className="rounded-full flex justify-center items-center">
                 {/* Icon */}
-                <Image src={Icon02} width={213} height={261} alt="Icon 02" />
+                <Image
+                  src={Icon02}
+                  className="z-0 w-full h-full object-cover"
+                  alt="Icon 02"
+                />
               </div>
             </div>
             <div
@@ -263,9 +252,13 @@ export default function Hero() {
               data-aos="fade-up"
             >
               {/* Circle */}
-              <div className="bg-gradient-to-t from-slate-800 to-slate-900 w-213 h-261 rounded-full flex justify-center items-center">
+              <div className="rounded-full flex justify-center items-center">
                 {/* Icon */}
-                <Image src={Icon03} width={213} height={261} alt="Icon 03" />
+                <Image
+                  src={Icon03}
+                  className="z-0 w-full h-full object-cover"
+                  alt="Icon 03"
+                />
               </div>
             </div>
             <div
@@ -273,9 +266,13 @@ export default function Hero() {
               data-aos="fade-up"
             >
               {/* Circle */}
-              <div className="bg-gradient-to-t from-slate-800 to-slate-900 w-213 h-261 rounded-full flex justify-center items-center">
+              <div className="rounded-full flex justify-center items-center">
                 {/* Icon */}
-                <Image src={Icon04} width={213} height={261} alt="Icon 04" />
+                <Image
+                  src={Icon04}
+                  className="z-0 w-full h-full object-cover"
+                  alt="Icon 04"
+                />
               </div>
             </div>
             <div
@@ -283,9 +280,13 @@ export default function Hero() {
               data-aos="fade-up"
             >
               {/* Circle */}
-              <div className="bg-gradient-to-t from-slate-800 to-slate-900 w-213 h-261 rounded-full flex justify-center items-center">
+              <div className="rounded-full flex justify-center items-center">
                 {/* Icon */}
-                <Image src={Icon05} width={213} height={261} alt="Icon 05" />
+                <Image
+                  src={Icon05}
+                  className="z-0 w-full h-full object-cover"
+                  alt="Icon 05"
+                />
               </div>
             </div>
             <div
@@ -293,14 +294,18 @@ export default function Hero() {
               data-aos="fade-up"
             >
               {/* Circle */}
-              <div className="bg-gradient-to-t from-slate-800 to-slate-900 w-213 h-261 rounded-full flex justify-center items-center">
+              <div className="rounded-full flex justify-center items-center">
                 {/* Icon */}
-                <Image src={Icon06} width={213} height={261} alt="Icon 06" />
+                <Image
+                  src={Icon06}
+                  className="z-0 w-full h-full object-cover"
+                  alt="Icon 06"
+                />
               </div>
             </div>
           </div>
 
-          <div className="pt-32 md:pt-40 text-left">
+          <div className="pt-[80px] text-left">
             {/* <div className="absolutebottom-0 z-0 w-full h-[1022px]">
               <Image
                 src={BottomBgImage}
@@ -310,22 +315,20 @@ export default function Hero() {
               />
             </div> */}
 
-            <h3 className="h4 font-hkgrotesk mb-6" data-aos="fade-up">
+            <h3 className="h4 font-hkgrotesk mb-[10px]" data-aos="fade-up">
               AGI Open Network Community
             </h3>
-            <div className="w-full md:w-1/2">
-              <p
-                className="text-xxl text-gray-400 mb-10"
-                data-aos="fade-up"
-                data-aos-delay="100"
-              >
-                Learn about AGI Open Network, discuss with the team and other
-                members in the community
-              </p>
-            </div>
+            <p
+              className="text-xxl text-white"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              Learn about AGI Open Network, discuss with the team and other
+              members in the community
+            </p>
 
             <div
-              className="pt-10 md:pt-10"
+              className="pt-[20px] md:pt-[10px]"
               data-aos="fade-up"
               data-aos-delay="300"
             >
@@ -337,7 +340,7 @@ export default function Hero() {
                 alt="Hero"
               /> */}
 
-              <div className="relative mx-auto grid grid-cols-4">
+              <div className="relative grid grid-cols-2 gap-y-[20px]">
                 {/* Top vertical line */}
                 <div className="relative " data-aos="fade-up">
                   {/* Circle */}
@@ -345,9 +348,8 @@ export default function Hero() {
                     {/* Icon */}
                     <Link rel="stylesheet" href={twitter} target="_blank">
                       <Image
+                        className="z-0 w-full h-full object-cover"
                         src={TwitterImg}
-                        width={221}
-                        height={90}
                         alt="Icon 01"
                       />
                     </Link>
@@ -359,9 +361,8 @@ export default function Hero() {
                     {/* Icon */}
                     <Link rel="stylesheet" href={discord} target="_blank">
                       <Image
+                        className="z-0 w-full h-full object-cover"
                         src={DiscordImg}
-                        width={221}
-                        height={90}
                         alt="Icon 02"
                       />
                     </Link>
@@ -373,9 +374,8 @@ export default function Hero() {
                     {/* Icon */}
                     <Link rel="stylesheet" href={medium} target="_blank">
                       <Image
+                        className="z-0 w-full h-full object-cover"
                         src={MediumImg}
-                        width={221}
-                        height={90}
                         alt="Icon 03"
                       />
                     </Link>
@@ -387,9 +387,8 @@ export default function Hero() {
                     {/* Icon */}
                     <Link rel="stylesheet" href={telegram} target="_blank">
                       <Image
+                        className="z-0 w-full h-full object-cover"
                         src={TelegramImg}
-                        width={221}
-                        height={90}
                         alt="Icon 04"
                       />
                     </Link>
@@ -397,20 +396,20 @@ export default function Hero() {
                 </div>
               </div>
 
-              <div className="mx-auto text-center pb-32 md:pt-40">
+              <div className="mx-auto text-center mt-[80px] pb-[80px]">
                 <div
                   style={{
                     position: "absolute",
                   }}
                 >
                   <Image
-                    className="z-10 h-full object-cover"
+                    className="z-10 h-[224px] min-w-[344px]"
                     src={AlertBgImage}
                     alt="Hero"
                   />
                 </div>
-                <h3
-                  className="h3 font-hkgrotesk mt-20"
+                <p
+                  className="text-[24px] font-hkgrotesk pt-[40px] mb-[30px] pr-[10px] pl-[10px]"
                   data-aos="fade-up"
                   style={{
                     background:
@@ -422,12 +421,13 @@ export default function Hero() {
                   }}
                 >
                   THE BEST WAY TO QUICKLY BUILD AND SHARE AIDAPP
-                </h3>
+                </p>
 
-                <ul className="flex grow justify-center flex-wrap items-center pt-20">
-                  <li className="mr-10">
+                <ul className="flex grow justify-center flex-wrap items-center">
+                  <li className="mr-5">
                     <BlueButton
                       buttonText={"Run AI API"}
+                      buttonStyle={{ width: "153px", height: "48px" }}
                       handleOnClick={() => window.open(AIAPI)}
                     />
                   </li>
@@ -435,6 +435,7 @@ export default function Hero() {
                   <li className="">
                     <BlackButton
                       buttonText={"Build AIDAPP"}
+                      buttonStyle={{ width: "153px", height: "48px" }}
                       handleOnClick={() => window.open(AIDAPP)}
                     />
                   </li>
@@ -443,122 +444,121 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="w-[1360] mt-40">
-            <ul className="flex justify-content: space-between grow">
-              <li className="w-[146]">
-                <Image
-                  className="z-10 w-full h-full object-cover"
-                  src={Logo}
-                  alt="Logo"
-                />
-              </li>
-              <li>
-                <div className="w-[90]"></div>
-              </li>
-              <li>
-                <Link
-                  className="h-[40px] font-medium"
-                  color="foreground"
-                  href={medium}
-                  target="_blank"
-                >
-                  Media Kit
-                </Link>
-              </li>
-              <li>
-                <div className="w-[64]"></div>
-              </li>
-              <li>
-                <Link
-                  className="h-[40px] font-medium"
-                  color="foreground"
-                  href={docs}
-                  target="_blank"
-                >
-                  Docs
-                </Link>
-              </li>
-              <li>
-                <div className="w-[64]"></div>
-              </li>
-              <li>
-                <Link
-                  className="h-[40px] font-medium"
-                  color="foreground"
-                  href={medium}
-                  target="_blank"
-                >
-                  Contact us: info@agiopen.network
-                </Link>
-              </li>
-              <li>
-                <div className="w-[380]"></div>
-              </li>
+          <div className="min-w-[344px] mt-[20px]">
+            <div className="flex justify-center items-center">
+              <Image
+                className="z-10 w-146px h-64px object-cover"
+                src={Logo}
+                alt="Logo"
+              />
+            </div>
 
-              <li>
-                <Link
-                  className="w-[68]"
-                  rel="stylesheet"
-                  href={medium}
-                  target="_blank"
-                >
-                  <Image
-                    src={MediumIcon}
-                    width={36}
-                    height={36}
-                    alt="Icon 01"
-                  />
-                </Link>
-              </li>
+            <div className="flex justify-between gap-x-[5px]">
+              <Link
+                className="h-[40px] font-medium text-[14px]"
+                color="foreground"
+                href={medium}
+                target="_blank"
+              >
+                Media Kit
+              </Link>
+              <Link
+                className="h-[40px] font-medium text-[14px]"
+                color="foreground"
+                href={docs}
+                target="_blank"
+              >
+                Docs
+              </Link>
+              <Link
+                className="h-[40px] font-medium text-[14px]"
+                color="foreground"
+                href={medium}
+                target="_blank"
+              >
+                Contact us: info@agiopen.network
+              </Link>
+            </div>
 
-              <li>
-                <Link
-                  className="w-[68]"
-                  rel="stylesheet"
-                  href={discord}
-                  target="_blank"
-                >
-                  <Image
-                    src={DiscordIcon}
-                    width={36}
-                    height={36}
-                    alt="Icon 02"
-                  />
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  className="w-[68]"
-                  rel="stylesheet"
-                  href={twitter}
-                  target="_blank"
-                >
-                  <Image
-                    src={TwitterIcon}
-                    width={36}
-                    height={36}
-                    alt="Icon 03"
-                  />
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  className="w-[36]"
-                  rel="stylesheet"
-                  href={github}
-                  target="_blank"
-                >
-                  <Image
-                    src={GithubIcon}
-                    width={36}
-                    height={36}
-                    alt="Icon 04"
-                  />
-                </Link>
-              </li>
-            </ul>
+            <div className="relative grid grid-cols-4">
+              {/* Top vertical line */}
+              <div className="relative " data-aos="fade-up">
+                {/* Circle */}
+                <div className="flex justify-start items-center">
+                  {/* Icon */}
+                  <Link
+                    className="w-[68]"
+                    rel="stylesheet"
+                    href={medium}
+                    target="_blank"
+                  >
+                    <Image
+                      src={MediumIcon}
+                      width={36}
+                      height={36}
+                      alt="Icon 01"
+                    />
+                  </Link>
+                </div>
+              </div>
+              <div className="relative" data-aos="fade-up">
+                {/* Circle */}
+                <div className="flex justify-center items-center">
+                  {/* Icon */}
+                  <Link
+                    className="w-[68px]"
+                    rel="stylesheet"
+                    href={discord}
+                    target="_blank"
+                  >
+                    <Image
+                      src={DiscordIcon}
+                      width={36}
+                      height={36}
+                      alt="Icon 02"
+                    />
+                  </Link>
+                </div>
+              </div>
+              <div className="relative" data-aos="fade-up">
+                {/* Circle */}
+                <div className="flex justify-center items-center">
+                  {/* Icon */}
+                  <Link
+                    className="w-[36px]"
+                    rel="stylesheet"
+                    href={twitter}
+                    target="_blank"
+                  >
+                    <Image
+                      src={TwitterIcon}
+                      width={36}
+                      height={36}
+                      alt="Icon 03"
+                    />
+                  </Link>
+                </div>
+              </div>
+              <div className="relative" data-aos="fade-up">
+                {/* Circle */}
+                <div className="flex justify-end items-center">
+                  {/* Icon */}
+                  <Link
+                    className="w-[36px]"
+                    rel="stylesheet"
+                    href={github}
+                    target="_blank"
+                  >
+                    <Image
+                      src={GithubIcon}
+                      width={36}
+                      height={36}
+                      alt="Icon 04"
+                    />
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -591,8 +591,8 @@ const BlueButton: React.FunctionComponent<BlueButtonProps> = ({
 
   const defaultButtonStyle = {
     position: "relative",
-    width: "261px",
-    height: "80px",
+    width: "165px",
+    height: "48px",
   };
 
   const buttonStyleToUse = buttonStyle
@@ -647,8 +647,8 @@ const BlackButton: React.FunctionComponent<BlueButtonProps> = ({
 
   const defaultButtonStyle = {
     position: "relative",
-    width: "261px",
-    height: "80px",
+    width: "165px",
+    height: "48px",
   };
 
   const buttonStyleToUse = buttonStyle
@@ -702,8 +702,8 @@ const LearnButton: React.FunctionComponent<BlueButtonProps> = ({
 
   const defaultButtonStyle = {
     position: "relative",
-    width: "149px",
-    height: "50px",
+    width: "117px",
+    height: "37px",
   };
 
   const buttonStyleToUse = buttonStyle
