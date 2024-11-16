@@ -2,7 +2,7 @@ import { Head } from "./head";
 
 import { Navbar } from "@/components/navbar";
 
-import HeroBannerBg from "@/public/images/home-banner-bg.png";
+import HeroBannerBg from "@/public/images/h5-banner-bg.png";
 import Image from "next/image";
 import BottomBgImage from "@/public/images/bottom-bg.png";
 
@@ -51,7 +51,7 @@ export default function DefaultLayout({
       const scrollPosition = window.scrollY;
       const documentHeight = document.body.offsetHeight;
       const windowHeight = window.innerHeight;
-      const threshold = documentHeight - windowHeight - 1022 / 2;
+      const threshold = documentHeight - windowHeight;
       console.log("scrollPosition", scrollPosition);
 
       if (scrollPosition >= threshold) {
@@ -74,22 +74,22 @@ export default function DefaultLayout({
     <div
       className={`${inter.variable} ${hkgrotesk.variable} font-inter antialiased text-slate-200 tracking-tight`}
     >
+      <Head />
+      <Navbar />
       <Image
-        className="mx-auto"
+        className="mx-auto w-full h-423px"
         src={HeroBannerBg}
         alt="Hero"
         style={{
+          // width: "375px",
+          height: "423px",
           position: "absolute",
-          objectFit: "cover", // 控制图片填充方式
+          // objectFit: "cover", // 控制图片填充方式
         }}
       />
-
-      <Head />
-      <Navbar />
-
       {/* 添加底部背景图像 */}
       {showBottomBg && (
-        <div className="fixed bottom-0 z-0 w-full h-[1022px]">
+        <div className="fixed bottom-0 z-0 w-full h-[300px]">
           <Image
             src={BottomBgImage}
             alt="BottomBgImage"
@@ -99,7 +99,7 @@ export default function DefaultLayout({
         </div>
       )}
 
-      <main className="container mx-auto max-w-[1360] flex-grow pt-16">
+      <main className="container mx-auto max-w-[375] flex-grow">
         {children}
       </main>
     </div>
