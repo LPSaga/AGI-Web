@@ -29,7 +29,7 @@ export const Navbar = () => {
     "Portal",
   ];
 
-  const handleMenuClick = (index) => {
+  const handleMenuClick = (index: number) => {
     if (index == 0) {
       return "#";
     } else if (index == 1) {
