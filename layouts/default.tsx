@@ -1,7 +1,7 @@
 import { Head } from "./head";
 import { Navbar } from "@/components/navbar";
 import H5HeroBannerBg from "@/public/images/h5-banner-bg.png";
-import HeroBannerBg from "@/public/images/h5-banner-bg.png";
+import HeroBannerBg from "@/public/images/home-banner-bg.png";
 import Image from "next/image";
 import BottomBgImage from "@/public/images/bottom-bg.png";
 
@@ -78,8 +78,8 @@ export default function DefaultLayout({
     >
       {isWeb && (
         <Image
-          className="mx-auto w-full h-423px"
-          src={H5HeroBannerBg}
+          className="mx-auto"
+          src={HeroBannerBg}
           alt="Hero"
           style={{
             position: "absolute",
@@ -94,7 +94,7 @@ export default function DefaultLayout({
       {!isWeb && (
         <Image
           className="mx-auto w-full h-423px"
-          src={HeroBannerBg}
+          src={H5HeroBannerBg}
           alt="Hero"
           style={{
             // width: "375px",

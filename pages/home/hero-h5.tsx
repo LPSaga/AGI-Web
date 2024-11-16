@@ -98,9 +98,9 @@ export default function Hero() {
 
           <div className="pt-[40px]" data-aos="fade-up" data-aos-delay="300">
             <div className="flex flex-col">
-              <h3 className="h4 font-hkgrotesk text-left" data-aos="fade-up">
+              <h4 className="h4 font-hkgrotesk text-left" data-aos="fade-up">
                 Simple, Clear, Useful For
-              </h3>
+              </h4>
               <p
                 className="text-xxl text-white pt-[12px] pb-[40px] text-left"
                 data-aos="fade-up"
@@ -315,9 +315,9 @@ export default function Hero() {
               />
             </div> */}
 
-            <h3 className="h4 font-hkgrotesk mb-[10px]" data-aos="fade-up">
+            <h4 className="h4 font-hkgrotesk mb-[10px]" data-aos="fade-up">
               AGI Open Network Community
-            </h3>
+            </h4>
             <p
               className="text-xxl text-white"
               data-aos="fade-up"

@@ -110,12 +110,12 @@ export default function Hero() {
           >
             <div className="flex flex-col md:flex-row items-center">
               <div className="w-full md:w-1/5">
-                <h3
+                <h4
                   className="h4 font-hkgrotesk mb-6 text-left"
                   data-aos="fade-up"
                 >
                   Simple, Clear, Useful For
-                </h3>
+                </h4>
               </div>
               <div className="w-full md:w-2/5"></div>
               <div className="w-full md:w-2/5">
@@ -310,9 +310,9 @@ export default function Hero() {
               />
             </div> */}
 
-            <h3 className="h4 font-hkgrotesk mb-6" data-aos="fade-up">
+            <h4 className="h4 font-hkgrotesk mb-6" data-aos="fade-up">
               AGI Open Network Community
-            </h3>
+            </h4>
             <div className="w-full md:w-1/2">
               <p
                 className="text-xxl text-gray-400 mb-10"
